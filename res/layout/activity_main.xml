@@ -9,8 +9,74 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="@string/welcome_main"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/login_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/welcome_text"
+        android:layout_below="@+id/welcome_text"
+        android:layout_marginTop="56dp"
+        android:text="@string/user_main"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/username_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_text"
+        android:layout_below="@+id/login_text"
+        android:ems="10"
+        android:hint="@string/user_hint_main" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/password_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/username_field"
+        android:layout_below="@+id/username_field"
+        android:layout_marginTop="22dp"
+        android:text="@string/password_text_main"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/password_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/password_text"
+        android:layout_below="@+id/password_text"
+        android:ems="10"
+        android:hint="@string/password_hint_main"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/password_field"
+        android:layout_below="@+id/password_field"
+        android:layout_marginTop="42dp"
+        android:text="@string/signup_main_btn_text" 
+        android:onClick="openSignupFormular"/>
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/signup_btn"
+        android:layout_alignBottom="@+id/signup_btn"
+        android:layout_alignRight="@+id/password_field"
+        android:text="@string/login_btn_text_main" />
 
 </RelativeLayout>

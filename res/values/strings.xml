@@ -4,5 +4,15 @@
     <string name="app_name">ScheduleFun</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="welcome_main">Welcome to the scheduler</string>
+    <string name="login_main">Login:</string>
+    <string name="user_main">Username:</string>
+    <string name="user_hint_main">Enter Username Here</string>
+    <string name="password_text_main">Password:</string>
+    <string name="password_hint_main">Enter Password Here</string>
+    <string name="signup_main_btn_text">SignUp</string>
+    <string name="login_btn_text_main">Login</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_signup">SignupActivity</string>
 
 </resources>
