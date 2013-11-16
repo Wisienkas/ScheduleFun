@@ -9,8 +9,85 @@
     tools:context=".SignupActivity" >
 
     <TextView
+        android:id="@+id/signup_welcome_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/signup_activity_welcome"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/signup_text_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/signup_welcome_text"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="22dp"
+        android:text="@string/user_main"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   	<EditText
+        android:id="@+id/signup_username_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_text_username"
+        android:layout_below="@+id/signup_text_username"
+        android:ems="10"
+        android:hint="@string/signup_username_field_hint" >
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/signup_text_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_username_field"
+        android:layout_below="@+id/signup_username_field"
+        android:layout_marginTop="27dp"
+        android:text="@string/password_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/signup_password_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_text_password"
+        android:layout_below="@+id/signup_text_password"
+        android:ems="10"
+        android:inputType="textPassword" 
+        android:hint="@string/password_hint"/>
+
+    <TextView
+        android:id="@+id/signup_text_password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_password_field"
+        android:layout_centerVertical="true"
+        android:text="@string/password_again"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/signup_password2_field"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/signup_text_password2"
+        android:layout_below="@+id/signup_text_password2"
+        android:ems="10"
+        android:inputType="textPassword" 
+        android:hint="@string/password_again">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/signup_signup_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signup_password2_field"
+        android:layout_marginTop="63dp"
+        android:layout_toRightOf="@+id/signup_text_username"
+        android:text="@string/signup_main_btn_text" />
 
 </RelativeLayout>

@@ -47,7 +47,7 @@
         android:layout_alignLeft="@+id/username_field"
         android:layout_below="@+id/username_field"
         android:layout_marginTop="22dp"
-        android:text="@string/password_text_main"
+        android:text="@string/password_text"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
@@ -57,7 +57,7 @@
         android:layout_alignLeft="@+id/password_text"
         android:layout_below="@+id/password_text"
         android:ems="10"
-        android:hint="@string/password_hint_main"
+        android:hint="@string/password_hint"
         android:inputType="textPassword" />
 
     <Button
