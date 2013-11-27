@@ -76,7 +76,7 @@
         android:layout_below="@+id/signup_text_password2"
         android:ems="10"
         android:inputType="textPassword" 
-        android:hint="@string/password_again">
+        android:hint="@string/password_again" >
 
         <requestFocus />
     </EditText>
@@ -88,6 +88,16 @@
         android:layout_below="@+id/signup_password2_field"
         android:layout_marginTop="63dp"
         android:layout_toRightOf="@+id/signup_text_username"
-        android:text="@string/signup_main_btn_text" />
+        android:text="@string/signup_main_btn_text"
+        android:onClick="registerNewUser" />
+
+    <TextView
+        android:id="@+id/signup_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signup_password2_field"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:text="@string/signup_intention" />
 
 </RelativeLayout>
