@@ -89,7 +89,7 @@
         android:layout_marginTop="63dp"
         android:layout_toRightOf="@+id/signup_text_username"
         android:text="@string/signup_main_btn_text"
-        android:onClick="registerNewUser" />
+        android:onClick="registerUser" />
 
     <TextView
         android:id="@+id/signup_message"

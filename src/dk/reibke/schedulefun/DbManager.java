@@ -1,8 +1,5 @@
 package dk.reibke.schedulefun;
 
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -10,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteStatement;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.text.style.SuperscriptSpan;
 
 public class DbManager extends SQLiteOpenHelper{
 
@@ -19,14 +17,6 @@ public class DbManager extends SQLiteOpenHelper{
 	private Context context;
 	
 	private static DbManager instance;
-	
-	public static DbManager getInstance(){
-		
-		if(instance == null){
-			return null;
-		}
-		return instance;
-	}
 	
 	public static DbManager InitiateDatabase(Context context, String name, CursorFactory factory,
 			int version, String username){

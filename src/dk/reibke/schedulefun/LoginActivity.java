@@ -3,13 +3,14 @@ package dk.reibke.schedulefun;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.view.View;
 
 public class LoginActivity extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.login_screen);
+		setContentView(R.layout.activity_login);
 	}
 
 	@Override
@@ -17,6 +18,16 @@ public class LoginActivity extends Activity {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.login, menu);
 		return true;
+	}
+	
+	public void forgotPasswordClick(View v){
+		
+		
+	}
+	
+	public void loginClick(View v){
+		
+		
 	}
 
 }

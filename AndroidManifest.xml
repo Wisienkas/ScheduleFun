@@ -29,10 +29,9 @@
         <activity
             android:name="dk.reibke.schedulefun.SignupActivity"
             android:label="@string/title_activity_signup" >
-            <meta-data 
+            <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="dk.reibke.schedulefun.MainActivity"/>
-            	
+                android:value="dk.reibke.schedulefun.MainActivity" />
         </activity>
     </application>
 

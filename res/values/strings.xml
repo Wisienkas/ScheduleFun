@@ -19,5 +19,9 @@
     <string name="signup_username_field_hint">Enter Username Here</string>
     <string name="password_again">Re-enter Password</string>
     <string name="signup_intention">Fill out fields</string>
+    <string name="login_welcome_text">Enter Login Information</string>
+    <string name="login_status">status:</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="login_forgot_btn">Forgot Pass</string>
 
 </resources>

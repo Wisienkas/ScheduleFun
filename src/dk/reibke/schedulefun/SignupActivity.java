@@ -1,5 +1,8 @@
 package dk.reibke.schedulefun;
 
+import java.security.NoSuchAlgorithmException;
+
+import dk.reibke.schedulefun.util.Utilities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -32,14 +35,16 @@ public class SignupActivity extends Activity {
 		return true;
 	}
 	
-	private void registerUser(View v){
+	public void registerUser(View v) throws NoSuchAlgorithmException{
 		this.usernameField = (EditText) findViewById(R.id.signup_username_field);
 		this.passwordField1 = (EditText) findViewById(R.id.signup_password_field);
 		this.passwordField2 = (EditText) findViewById(R.id.signup_password2_field);
 		
 		this.username = this.usernameField.getText().toString();
-		String pass1 = this.passwordField1.getText().toString();
-		String pass2 = this.passwordField2.getText().toString();
+		DbManager.InitiateDatabase(this, Utilities.getDatabaseName(), null, Utilities.getVersion(this), this.username);
+		
+		String pass1 = Utilities.SHA256(this.passwordField1.getText().toString());
+		String pass2 = Utilities.SHA256(this.passwordField2.getText().toString());
 		if(pass1.equals(pass2) && DbManager.getInstance(this).hasUser(this.username)){
 			DbManager.getInstance(this).addUser(this.username, pass1);
 			userAdded();
@@ -54,7 +59,6 @@ public class SignupActivity extends Activity {
 
 	private void userAdded() {
 		this.intention.setText("User added");
-		
 	}
 
 	private void UserTaken() {
