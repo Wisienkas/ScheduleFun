@@ -23,5 +23,7 @@
     <string name="login_status">status:</string>
     <string name="btn_confirm">Confirm</string>
     <string name="login_forgot_btn">Forgot Pass</string>
+    <string name="main_login_text">Already registrered?</string>
+    <string name="main_signup_text">New user?</string>
 
 </resources>

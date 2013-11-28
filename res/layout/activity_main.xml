@@ -18,65 +18,42 @@
         android:text="@string/welcome_main"
         android:textSize="20sp" />
 
-    <TextView
-        android:id="@+id/login_text"
+    <Button
+        android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/welcome_text"
+        android:layout_alignRight="@+id/welcome_text"
         android:layout_below="@+id/welcome_text"
-        android:layout_marginTop="56dp"
-        android:text="@string/user_main"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
-        android:id="@+id/username_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/login_text"
-        android:layout_below="@+id/login_text"
-        android:ems="10"
-        android:hint="@string/user_hint_main" >
-
-        <requestFocus />
-    </EditText>
-
-    <TextView
-        android:id="@+id/password_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/username_field"
-        android:layout_below="@+id/username_field"
-        android:layout_marginTop="22dp"
-        android:text="@string/password_text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <EditText
-        android:id="@+id/password_field"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/password_text"
-        android:layout_below="@+id/password_text"
-        android:ems="10"
-        android:hint="@string/password_hint"
-        android:inputType="textPassword" />
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="62dp"
+        android:text="@string/login_btn_text_main" />
 
     <Button
         android:id="@+id/signup_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/password_field"
-        android:layout_below="@+id/password_field"
-        android:layout_marginTop="42dp"
-        android:text="@string/signup_main_btn_text" 
-        android:onClick="openSignupFormular"/>
+        android:layout_alignLeft="@+id/login_btn"
+        android:layout_below="@+id/login_btn"
+        android:layout_marginTop="47dp"
+        android:onClick="openSignupFormular"
+        android:text="@string/signup_main_btn_text" />
 
-    <Button
-        android:id="@+id/login_btn"
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/login_btn"
+        android:layout_alignBottom="@+id/login_btn"
+        android:layout_alignLeft="@+id/welcome_text"
+        android:text="@string/main_login_text" />
+
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/signup_btn"
         android:layout_alignBottom="@+id/signup_btn"
-        android:layout_alignRight="@+id/password_field"
-        android:text="@string/login_btn_text_main" />
+        android:layout_alignLeft="@+id/textView1"
+        android:text="@string/main_signup_text" />
 
 </RelativeLayout>

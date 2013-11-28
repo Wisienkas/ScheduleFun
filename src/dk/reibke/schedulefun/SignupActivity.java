@@ -23,8 +23,6 @@ public class SignupActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_signup);
-		Intent intent = getIntent();
-		this.username = intent.getStringExtra("username");
 		this.intention = (TextView) findViewById(R.id.signup_message);
 	}
 

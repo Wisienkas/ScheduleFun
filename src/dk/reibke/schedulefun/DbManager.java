@@ -16,12 +16,18 @@ public class DbManager extends SQLiteOpenHelper{
 	private SQLiteDatabase databaseRead;
 	private Context context;
 	
+	private static boolean initialized = false;
 	private static DbManager instance;
+	
+	public static boolean isInitialized(){
+		return initialized;
+	}
 	
 	public static DbManager InitiateDatabase(Context context, String name, CursorFactory factory,
 			int version, String username){
 		if(instance == null){
 			instance = new DbManager(context, name, factory, version, username);
+			initialized = true;
 		}
 		return instance;
 	}
@@ -97,6 +103,16 @@ public class DbManager extends SQLiteOpenHelper{
 		}finally{
 			this.databaseWrite.endTransaction();
 		}
+	}
+
+	public Cursor confirmUser(String username, String password) {
+		String[] fields = {"username", "password"};
+		Cursor result = this.databaseRead.rawQuery("Select username" +
+				"FROM users" +
+				"WHERE username = ? " +
+				"AND password = ?;", 
+				fields);
+		return result;
 	}
 	
 }

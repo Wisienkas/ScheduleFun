@@ -36,10 +36,13 @@ public class MainActivity extends Activity {
 	public void openSignupFormular(View v){
 		
 		Intent intent = new Intent(this, SignupActivity.class);
-		EditText userTextField = (EditText) findViewById(R.id.username_field);
-		String username = userTextField.getText().toString();
-		intent.putExtra("username", username);
 		startActivity(intent);
+		
+	}
+	
+	public void openLoginFormular(View v){
+		
+		
 		
 	}
 	
