@@ -26,7 +26,8 @@
         android:layout_below="@+id/welcome_text"
         android:layout_marginRight="30dp"
         android:layout_marginTop="62dp"
-        android:text="@string/login_btn_text_main" />
+        android:text="@string/login_btn_text_main" 
+        android:onClick="openLoginFormular"/>
 
     <Button
         android:id="@+id/signup_btn"

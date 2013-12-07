@@ -33,6 +33,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="dk.reibke.schedulefun.MainActivity" />
         </activity>
+        <activity
+            android:name="dk.reibke.schedulefun.UserOverviewActivity"
+            android:label="@string/title_activity_user_overview" >
+        </activity>
     </application>
 
 </manifest>

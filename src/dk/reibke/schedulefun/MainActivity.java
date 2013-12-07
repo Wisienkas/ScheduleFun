@@ -22,8 +22,7 @@ public class MainActivity extends Activity {
 
 	private void initialize() {
 		login_btn = (Button) findViewById(R.id.login_btn);
-		
-		
+		signup_btn = (Button) findViewById(R.id.signup_btn);
 	}
 
 	@Override
@@ -34,16 +33,13 @@ public class MainActivity extends Activity {
 	}
 	
 	public void openSignupFormular(View v){
-		
 		Intent intent = new Intent(this, SignupActivity.class);
 		startActivity(intent);
-		
 	}
 	
 	public void openLoginFormular(View v){
-		
-		
-		
+		Intent intent = new Intent(this, LoginActivity.class);
+		startActivity(intent);
 	}
 	
 

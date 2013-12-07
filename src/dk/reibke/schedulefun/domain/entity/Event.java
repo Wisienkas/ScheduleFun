@@ -1,4 +1,4 @@
-package dk.reibke.schedulefun.domain;
+package dk.reibke.schedulefun.domain.entity;
 
 import java.util.Calendar;
 
